@@ -1,0 +1,77 @@
+$border: #e7e7e7;
+.el-pagination {
+  button,
+  span {
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    &.disabled {
+      color: #9d9d9d;
+      background-color: #f1f1f1;
+    }
+  }
+  button {
+    color: #3faffc;
+    border: 1px solid $border;
+    &:hover {
+      background: #f2f2f2;
+      color: #64d1b5;
+    }
+  }
+  .btn-prev,
+  .btn-next {
+    border: 1px solid $border;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #3faffc;
+    &:hover {
+      color: #64d1b5;
+    }
+  }
+}
+
+.btn-prev {
+  border-right-width: 1px;
+}
+
+.el-pager {
+  margin: 0 4px;
+  li {
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid $border;
+    color: #404241;
+    &:hover {
+      background: #f2f2f2;
+      color: #64d1b5;
+    }
+    &.active {
+      color: #fff;
+      background-color: #51d2b7;
+      border-color: $border;
+      &+li {
+        padding-left: 4px;
+        border: 1px solid $border;
+      }
+    }
+    &+li {
+      margin-left: 4px;
+    }
+  }
+}
+
+.el-pagination__editor {
+  line-height: 20px;
+  border-color: $border;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  &:focus {
+    border-color: #51d2b7;
+  }
+}

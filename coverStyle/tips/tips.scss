@@ -1,0 +1,26 @@
+.el-alert--info{
+  padding: 5px 10px;
+  border: 1px solid #51d2b7;
+  background-color: #fbfffe;
+  color: #51d2b7;
+  border-radius: 0;
+
+}
+.el-alert__title{font-size: 12px;line-height:1.5em;display:block;}
+.el-alert__content{padding:0;}
+.el-alert--warning{
+  padding: 5px 10px;
+  border: 1px solid #fab418;
+  background: #fffdf6;
+  color: #666;
+  border-radius: 0;
+}
+.el-alert--error{
+  padding: 5px 10px;
+  border: 1px solid #e15a5f;
+  background: #fff2f4;
+  color: #e15a5f;
+  border-radius: 0;
+}
+.el-popover__title{display:none;}
+.el-popover[x-placement^=top] .popper__arrow{display:none;}

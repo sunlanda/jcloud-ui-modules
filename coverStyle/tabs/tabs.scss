@@ -1,0 +1,50 @@
+$borderColor:#d1dbe5;
+$color2aa:#2aafff;
+$borderAndBg:#51d2b7;
+$bgColor51:#ebf1f5;
+$borderDbe:#dbe3e9;
+
+.item-margin{
+  margin-bottom: 60px;
+  position: relative;
+}
+.item-tab{
+  border:1px solid $borderDbe;
+  .el-tabs__header{
+    margin-bottom: 0;
+  }
+  .el-tabs__content{
+    padding-top: 15px;
+    background: $bgColor51;
+  }
+}
+.el-tabs__item{
+  color: #2aafff;
+  &.is-active{
+    background: $bgColor51;
+    border-right-color: $borderColor;
+    border-left-color: $borderColor;
+    border-top-color: $borderAndBg;
+    color: #4e515e;
+    &:hover{
+      color: #4e515e;
+    }
+  }
+  &:hover{
+    color: #2aafff;
+    cursor: pointer;
+  }
+}
+
+.el-tabs__active-bar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: $borderAndBg;
+  z-index: 1;
+  transition: transform .3s cubic-bezier(.645,.045,.355,1);
+  list-style: none
+}
+
+
