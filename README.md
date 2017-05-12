@@ -1,9 +1,9 @@
  
 # jcloud-ui-modules
- 
+###### Internal project use, not recommended to spread
 
 #### 项目说明
-* 一套基于vue+element-ui的公共ui 
+* 一套基于[vue](http://cn.vuejs.org/)+[element-ui](http://element.eleme.io/#/zh-CN)的公共ui 
 * 适用于PC控制台/管理系统类型的项目
 
 #### 使用说明
@@ -31,6 +31,9 @@
 
 
 #### devlog:
+
+###### Fri May 12 09:29:30 CST 2017
+1.1.8版本更新 更新readme说明 publish
 
 ###### Thu May 11 18:25:22 CST 2017
 1.1.6版本更新 将引用的精灵图转为base64 解决相对路径引入麻烦问题 
