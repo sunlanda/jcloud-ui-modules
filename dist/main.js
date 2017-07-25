@@ -63,33 +63,18 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
-/******/ ([
-/* 0 */
-/***/ (function(module, exports) {
+/******/ ({
 
-function hello(name) {
-
-    console.log("hello: " + name);
-}
-exports.hello = hello;
-
-/***/ }),
-/* 1 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 2 */
+/***/ 3:
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(1)
+(function webpackMissingModule() { throw new Error("Cannot find module \"run\""); }());
+(function webpackMissingModule() { throw new Error("Cannot find module \"build\""); }());
 
-var h = __webpack_require__(0);
-h.hello('module_01');
 
 /***/ })
-/******/ ]);
+
+/******/ });

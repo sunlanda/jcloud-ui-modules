@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>css_text_jcloud_ui_module</title>
+    <link href="lib/common.css" rel="stylesheet">
+    <link href="lib/ui.css" rel="stylesheet">
+    <link href="lib/user.css" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/element-ui/lib/theme-default/index.css">
+    <link rel="stylesheet" href="dist/index.css">
+    <script src="https://cdn.bootcss.com/vue/2.3.3/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <style>
+        .p50 {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div class="p50"></div>
+        <!-- 主内容区begin -->
+        <div class="mainCon">
+            <div class="indexTit">
+                <h2 class="fl">
+                    <a href="#" class="goback"></a>代金券管理<i class="i42"></i><span class="f14">使用明细</span></h2>
+            </div>
+
+            <div class="innerCon">
+
+                <div class="conBox">
+
+                    <el-form :inline="true" :rules="rules" ref="searchForm" :model="searchForm" class="demo-form-inline">
+
+                        <el-form-item label="发票状态">
+                            <el-select placeholder="发票状态">
+                                <el-option label="已申请" value="1"></el-option>
+                                <el-option label="处理中" value="2"></el-option>
+                                <el-option label="已开票" value="3"></el-option>
+                                <el-option label="已邮寄" value="4"></el-option>
+                                <el-option label="已驳回" value="5"></el-option>
+                                <el-option label="已作废" value="6"></el-option>
+                                <el-option label="已取消" value="7"></el-option>
+                            </el-select>
+                        </el-form-item>
+
+                        <el-form-item label="选择时间">
+                            <el-col :span="11">
+                                <el-date-picker type="date" placeholder="选择开始日期" style="width: 100%;"></el-date-picker>
+                            </el-col>
+                            <el-col class="line" :span="2">&nbsp;至&nbsp;</el-col>
+                            <el-col :span="11">
+                                <el-form-item>
+                                    <el-date-picker type="date" placeholder="选择结束日期" style="width: 100%;"></el-date-picker>
+                                </el-form-item>
+                            </el-col>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary">查询</el-button>
+                        </el-form-item>
+
+
+
+                    </el-form>
+
+                    <div class="btnDiv">
+                        <label class="form-tablelabel">交易类型：</label>
+                        <div class="select-box form-w120">
+                            <div class="dropdown-btn"><span class="select-value">全部</span><i class="arr"></i></div>
+                            <div class="dropdown-list" id="refresh">
+                                <ul>
+                                    <li><a href="javascript:;">发放</a></li>
+                                    <li><a href="javascript:;">支付</a></li>
+                                    <li><a href="javascript:;">绑定</a></li>
+                                    <li><a href="javascript:;">过期</a></li>
+                                    <li><a href="javascript:;">返回</a></li>
+                                    <li><a href="javascript:;">退款</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+                        <label class="form-tablelabel">交易时间：</label>
+
+                        <input type="text" class="inputMode dateInput ml0">
+
+                        <a href="#" class="greenBtn_v2 ml10">查询</a>
+
+
+
+                    </div>
+                    <table class="listTable el-table">
+                        <colgroup>
+                            <col width="20%">
+                            <col width="20%">
+                            <col width="10%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col width="12%">
+                            <col>
+                        </colgroup>
+                        <thead>
+                            <tr class="cell">
+                                <th>交易编号</th>
+                                <th>代金券编号</th>
+                                <th>交易类型</th>
+                                <th>收入（元）</th>
+                                <th>支出（元）</th>
+                                <th>余额（元）</th>
+                                <th>交易时间</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2016110704235599116</td>
+                                <td>8GTYIfA</td>
+                                <td>支付</td>
+                                <td>200，000.00</td>
+                                <td>200，000.00</td>
+                                <td>200，000.00</td>
+                                <td>2016-12-11 00:00:00</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div class="botDiv cl">
+                        <template>
+ <div class="block">
+    <span class="demonstration">完整功能</span>
+    <el-pagination
+      
+      :current-page="1"
+      :page-sizes="[100, 200, 300, 400]"
+      :page-size="100"
+      layout="total, sizes, prev, pager, next, jumper"
+      :total="400">
+    </el-pagination>
+  </div>
+</template>
+                        <div class="pages cl fr">
+                            <p class="fr">项 <a href="#" class="firstpage no"><i></i></a><a href="#" class="prev no">
+                        &lt;</a><span class="current">1</span><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#">5</a><a href="#" class="next">&gt;</a><a href="#" class="lastpage"><i></i></a> 跳转到
+                                <input type="text" class="pageinput">页<a href="#" class="gobutton">GO</a></p>
+                            <div class="new-sel-box">
+                                <div class="sel-value">10</div>
+                                <select class="new-select">
+                            <option>10</option>
+                            <option>20</option>
+                            <option>50</option>
+                        </select>
+                            </div>
+                            <p class="txt">共100项，每页显示</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 主内容区end -->
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el: "#app",
+        data: {
+            ruleForm: {
+                name: '',
+                region: '',
+                date1: '',
+                date2: '',
+                delivery: false,
+                type: [],
+                resource: '',
+                desc: ''
+            },
+            rules: {
+                name: [{
+                    required: true,
+                    message: '请输入活动名称',
+                    trigger: 'blur'
+                }, {
+                    min: 3,
+                    max: 5,
+                    message: '长度在 3 到 5 个字符',
+                    trigger: 'blur'
+                }],
+                region: [{
+                    required: true,
+                    message: '请选择活动区域',
+                    trigger: 'change'
+                }],
+                date1: [{
+                    type: 'date',
+                    required: true,
+                    message: '请选择日期',
+                    trigger: 'change'
+                }],
+                date2: [{
+                    type: 'date',
+                    required: true,
+                    message: '请选择时间',
+                    trigger: 'change'
+                }],
+                type: [{
+                    type: 'array',
+                    required: true,
+                    message: '请至少选择一个活动性质',
+                    trigger: 'change'
+                }],
+                resource: [{
+                    required: true,
+                    message: '请选择活动资源',
+                    trigger: 'change'
+                }],
+                desc: [{
+                    required: true,
+                    message: '请填写活动形式',
+                    trigger: 'blur'
+                }]
+            }
+        }
+    })
+</script>
+
+</html>

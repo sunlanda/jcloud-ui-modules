@@ -1,32 +1,63 @@
 //表格
 body {
-  .el-table--enable-row-hover .el-table__body tr:hover>td{background-color:#f9f8e8}
-  .el-table {
-    font-size: 12px;
-    .descending .sort-caret.descending {
-      border-top-color: #5fd2b5;
+    .el-table--enable-row-hover .el-table__body tr:hover>td {
+        background-color: #f9f8e8
     }
-    .ascending .sort-caret.ascending {
-      border-bottom-color: #5fd2b5;
+    .el-table {
+        .el-table__header th>.cell {
+            line-height: 1;
+        }
+        font-size: 12px;
+        & .cell {
+            padding: 10px;
+            line-height: 18px;
+        }
+        & th>div {
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        .descending .sort-caret.descending {
+            border-top-color: #5fd2b5;
+        }
+        .ascending .sort-caret.ascending {
+            border-bottom-color: #5fd2b5;
+        }
+        .el-icon-time {
+            color: #5fd2b5
+        }
     }
-    .el-icon-time {
-      color: #5fd2b5
+    .el-table::after,
+    .el-table::before {
+        background-color: rgba(255, 255, 255, .1);
     }
+    //input number
+    .el-input-number {
+        .el-input-number__decrease:hover,
+        .el-input-number__increase:hover {
+            color: #5fd2b5;
+        }
+        .el-input__inner:focus {
+            border-color: #5fd2b5
+        }
+        .el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled),
+        .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled) {
+            border-color: #5fd2b5
+        }
+    }
+    .el-table--border td,
+    .el-table--border th {
+        border-right: none;
+    }
+    table tr th {
+        font-size: 12px;
+        border-bottom: 1px solid #dde5eb;
+        font-weight: 600;
+        background: #f3f7fb;
+    }
+}
 
-  } //input number
-  .el-input-number {
-    .el-input-number__decrease:hover,
-    .el-input-number__increase:hover {
-      color: #5fd2b5;
-    }
-    .el-input__inner:focus {
-      border-color: #5fd2b5
-    }
-    .el-input-number__decrease:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled),
-    .el-input-number__increase:hover:not(.is-disabled)~.el-input .el-input__inner:not(.is-disabled) {
-      border-color: #5fd2b5
-    }
-  }
+.table-no-border {
+    border: 0;
 }
 
 //#5fd2b5  base-color

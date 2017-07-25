@@ -4,63 +4,68 @@ $btnBorder:#dde5eb;
 $colorWhite:#fff;
 $color999:#999;
 $disabledBg:#f4f4f4;
-
-.el-button{
-  font-size: 12px;
-  -webkit-border-radius:3px;
-  -moz-border-radius:3px;
-  border-radius:3px;
-  &:hover{
-      color: #51d2b7;
+.el-button {
+    min-width: 88px;
+    font-size: 12px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    &:hover {
+        color: #51d2b7;
     }
-  &.is-disabled{
-    color: $color999;
-    border-color: $disabledBg;
-    background: $disabledBg;
-    &:focus,&:hover{
-      color: $color999;
-      border-color: $disabledBg;
-      background: $disabledBg;
+    &.is-disabled {
+        color: $color999;
+        border-color: $disabledBg;
+        background: $disabledBg;
+        &:focus,
+        &:hover {
+            color: $color999;
+            border-color: $disabledBg;
+            background: $disabledBg;
+        }
     }
-  }
 }
-.el-button--default{
-  color: #666;
-  border-color: $btnBorder;
-  &:focus{
+
+.el-button--default {
     color: #666;
     border-color: $btnBorder;
-  }
-  &:hover{
-    color: $colorWhite;
-    border-color: $btnBgHover;
-    background: $btnBgHover;
-  }
+    &:focus {
+        color: #666;
+        border-color: $btnBorder;
+    }
+    &:hover {
+        color: $colorWhite;
+        border-color: $btnBgHover;
+        background: $btnBgHover;
+    }
 }
-.el-button--primary{
-  padding: 9px 5px;
-  min-width: 88px;
-  background: $btnBg;
-  border-color: $btnBg;
-  &:focus{
+
+.el-button--primary {
+    padding: 9px 5px;
     background: $btnBg;
     border-color: $btnBg;
-  }
-  &:hover{
-    color: $colorWhite;
-    background: $btnBgHover;
-    border-color: $btnBgHover;
-  }
+    &:focus {
+        background: $btnBg;
+        border-color: $btnBg;
+    }
+    &:hover {
+        color: $colorWhite;
+        background: $btnBgHover;
+        border-color: $btnBgHover;
+    }
 }
-.el-button--large{
-  padding: 12px 5px;
-  min-width: 88px;
+
+.el-button--large {
+    padding: 12px 5px;
+    min-width: 88px;
 }
-.el-button--small{
-  padding: 6px 5px;
-  min-width: 70px;
+
+.el-button--small {
+    padding: 6px 5px;
+    min-width: 70px;
 }
-.el-button--mini{
-  padding: 6px 5px;
-  min-width: 48px;
+
+.el-button--mini {
+    padding: 6px 5px;
+    min-width: 48px;
 }
