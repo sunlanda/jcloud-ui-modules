@@ -3565,9 +3565,12 @@ a:hover {
   border: 1px solid #e7e7e7; }
 
 .el-form-item__label {
-  padding: 8px 12px 8px 0; }
+  padding: 10px 4px 10px 0;
+  font-size: 12px;
+  line-height: 1; }
 
 .el-form-item__content {
+  font-size: 12px;
   line-height: 30px; }
 
 .el-form .el-col .el-input__inner {
@@ -3575,6 +3578,7 @@ a:hover {
 
 .el-form .el-input,
 .el-form .el-textarea {
+  font-size: 12px;
   width: 420px; }
   .el-form .el-input .el-input__inner::-webkit-input-placeholder,
   .el-form .el-input .el-textarea__inner::-webkit-input-placeholder,
@@ -3685,7 +3689,8 @@ a:hover {
   height: 4px; }
 
 .el-radio-group .el-radio__label {
-  padding-left: 10px; }
+  padding-left: 10px;
+  font-size: 12px; }
 
 .el-radio-group .el-radio-button__inner {
   padding: 0 12px;
@@ -3726,13 +3731,20 @@ a:hover {
   padding-left: 12px;
   font-size: 12px; }
 
-.el-checkbox-group .el-checkbox__input .el-checkbox__inner::after {
-  left: 4px;
-  transform: rotate(45deg) scaleX(0.8) scaleY(0); }
+.el-checkbox .el-checkbox__label {
+  font-size: 12px; }
 
+/* css hack */
 .el-checkbox-group .el-checkbox__input.is-checked .el-checkbox__inner::after {
   left: 4px;
-  transform: rotate(45deg) scaleX(0.8) scaleY(0.8); }
+  transform: rotate(45deg) scaleX(0.8) scaleY(0.8) \9;
+  -ms-transform: rotate(45deg) scaleX(0.7) scaleY(0.7); }
+
+/* css hack */
+.el-checkbox__input.is-checked .el-checkbox__inner::after {
+  left: 4px;
+  transform: rotate(45deg) scaleX(0.8) scaleY(0.8) \9;
+  -ms-transform: rotate(45deg) scaleX(0.7) scaleY(0.7); }
 
 .el-checkbox-group .el-checkbox__input.is-disabled .el-checkbox__inner {
   border-color: #e7e7e7;
@@ -3781,41 +3793,44 @@ a:hover {
   vertical-align: -1px;
   margin-right: 6px; }
 
-.el-pagination button,
-.el-pagination span {
-  min-width: 30px;
-  height: 30px;
-  line-height: 30px;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0; }
-  .el-pagination button.disabled,
-  .el-pagination span.disabled {
-    color: #9d9d9d;
-    background-color: #f1f1f1; }
-
-.el-pagination button {
-  color: #3faffc;
-  border: 1px solid #e7e7e7; }
-  .el-pagination button:hover {
-    background: #f2f2f2;
-    color: #64d1b5; }
-
-.el-pagination .el-pagination__sizes {
-  width: 110px; }
-  .el-pagination .el-pagination__sizes input {
+.el-pagination {
+  /* ie9 hack fix */ }
+  .el-pagination button,
+  .el-pagination span {
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0; }
+    .el-pagination button.disabled,
+    .el-pagination span.disabled {
+      color: #9d9d9d;
+      background-color: #f1f1f1; }
+  .el-pagination button {
+    color: #3faffc;
+    border: 1px solid #e7e7e7; }
+    .el-pagination button:hover {
+      background: #f2f2f2;
+      color: #64d1b5; }
+  .el-pagination .el-pagination__sizes {
     width: 110px; }
-
-.el-pagination .btn-prev,
-.el-pagination .btn-next {
-  border: 1px solid #e7e7e7;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  color: #3faffc; }
-  .el-pagination .btn-prev:hover,
-  .el-pagination .btn-next:hover {
-    color: #64d1b5; }
+    .el-pagination .el-pagination__sizes input {
+      width: 110px; }
+  .el-pagination .el-select .el-input .el-input__icon {
+    -ms-transform: translateY(-50%) rotate(180deg) !important; }
+  .el-pagination .el-select .el-input .el-input__icon.is-reverse {
+    -ms-transform: translateY(-50%) !important; }
+  .el-pagination .btn-prev,
+  .el-pagination .btn-next {
+    border: 1px solid #e7e7e7;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    color: #3faffc; }
+    .el-pagination .btn-prev:hover,
+    .el-pagination .btn-next:hover {
+      color: #64d1b5; }
 
 .btn-prev {
   border-right-width: 1px; }
@@ -3882,6 +3897,12 @@ a:hover {
   -moz-border-radius: 0;
   border-radius: 0;
   border: 1px solid #e7e7e7; }
+
+.el-select .el-input .el-input__icon {
+  -ms-transform: translateY(-50%) rotate(180deg) !important; }
+
+.el-select .el-input .el-input__icon.is-reverse {
+  -ms-transform: translateY(-50%) !important; }
 
 .console-slide .el-slider {
   padding: 5px;

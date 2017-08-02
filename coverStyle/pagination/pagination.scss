@@ -29,8 +29,10 @@ $border: #e7e7e7;
     }
     /* ie9 hack fix */
     .el-select .el-input .el-input__icon {
-        top: 0%\9;
-        top: 50%;
+        -ms-transform: translateY(-50%) rotate(180deg)!important;
+    }
+    .el-select .el-input .el-input__icon.is-reverse {
+        -ms-transform: translateY(-50%)!important;
     }
     .btn-prev,
     .btn-next {

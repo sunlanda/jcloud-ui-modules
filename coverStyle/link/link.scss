@@ -22,6 +22,7 @@
 
 .el-radio-group .el-radio__label {
     padding-left: 10px;
+    font-size: 12px;
 }
 
 .el-radio-group .el-radio-button__inner {
@@ -71,14 +72,26 @@
     font-size: 12px;
 }
 
-.el-checkbox-group .el-checkbox__input .el-checkbox__inner::after {
-    left: 4px;
-    transform: rotate(45deg) scaleX(0.8) scaleY(0)
+.el-checkbox .el-checkbox__label {
+    font-size: 12px;
 }
+
+
+/* css hack */
 
 .el-checkbox-group .el-checkbox__input.is-checked .el-checkbox__inner::after {
     left: 4px;
-    transform: rotate(45deg) scaleX(0.8) scaleY(0.8)
+    transform: rotate(45deg) scaleX(0.8) scaleY(0.8)\9;
+    -ms-transform: rotate(45deg) scaleX(0.7) scaleY(0.7);
+}
+
+
+/* css hack */
+
+.el-checkbox__input.is-checked .el-checkbox__inner::after {
+    left: 4px;
+    transform: rotate(45deg) scaleX(0.8) scaleY(0.8)\9;
+    -ms-transform: rotate(45deg) scaleX(0.7) scaleY(0.7);
 }
 
 .el-checkbox-group .el-checkbox__input.is-disabled .el-checkbox__inner {

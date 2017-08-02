@@ -1,3 +1,4 @@
+var path = require('path')
 var webpack = require('webpack');
 var commonsPlugin = new webpack.optimize.CommonsChunkPlugin('common');
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
@@ -21,6 +22,12 @@ module.exports = {
     output: {
         path: __dirname + '/dist/',
         filename: '[name].js'
+    },
+    resolve: {
+        extensions: ['.js', '.vue', '.json'],
+        alias: {
+            'element-ui': path.resolve(__dirname, '../node_modules/element-ui-jcloud')
+        }
     },
 
     module: {

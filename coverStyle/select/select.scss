@@ -45,3 +45,11 @@ $selBorderColor:#e7e7e7;
         }
     }
 }
+
+.el-select .el-input .el-input__icon {
+    -ms-transform: translateY(-50%) rotate(180deg)!important;
+}
+
+.el-select .el-input .el-input__icon.is-reverse {
+    -ms-transform: translateY(-50%)!important;
+}

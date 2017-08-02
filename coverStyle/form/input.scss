@@ -5,10 +5,13 @@
   }
   
   .el-form-item__label {
-      padding: 8px 12px 8px 0;
+      padding: 10px 4px 10px 0;
+      font-size: 12px;
+      line-height: 1;
   }
   
   .el-form-item__content {
+      font-size: 12px;
       line-height: 30px;
   }
   
@@ -20,6 +23,7 @@
       }
       .el-input,
       .el-textarea {
+          font-size: 12px;
           width: 420px;
           .el-input__inner::-webkit-input-placeholder,
           .el-textarea__inner::-webkit-input-placeholder {
